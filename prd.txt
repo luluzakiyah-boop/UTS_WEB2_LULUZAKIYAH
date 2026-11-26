@@ -1,0 +1,1410 @@
+PRODUCT REQUIREMENTS DOCUMENT (PRD)
+
+L-PATISSERIE
+
+Website Toko Kue Berbasis Laravel
+
+Disusun oleh: Lulu Zakiyah
+Nama Produk: L-Patisserie
+Jenis Produk: Website E-Commerce Katalog Produk UMKM
+Platform: Website
+Framework: Laravel 12
+Database: MySQL
+Versi Dokumen: 1.0
+Tahun: 2026
+
+1. PENDAHULUAN
+
+1.1 Latar Belakang
+
+Perkembangan teknologi informasi memberikan peluang bagi pelaku Usaha Mikro, Kecil, dan Menengah (UMKM) untuk memperluas jangkauan pemasaran melalui media digital. Salah satu bentuk pemanfaatan teknologi tersebut adalah penggunaan website sebagai sarana promosi, penyampaian informasi, dan pengelolaan produk usaha.
+
+Usaha toko kue merupakan salah satu bidang bisnis yang memiliki potensi besar karena produk makanan, khususnya kue dan pastry, banyak diminati untuk berbagai kebutuhan seperti ulang tahun, perayaan, hadiah, maupun konsumsi sehari-hari. Namun, pemasaran yang hanya mengandalkan media sosial atau penjualan secara langsung dapat membuat informasi produk kurang terorganisasi.
+
+Berdasarkan permasalahan tersebut, dikembangkan L-Patisserie, yaitu website toko kue berbasis Laravel yang dirancang untuk membantu memperkenalkan produk, menampilkan informasi usaha, dan mempermudah pengelolaan data produk secara digital.
+
+Website ini mengusung konsep desain modern, elegan, dan estetik dengan dominasi warna pastel seperti dusty pink, cream, putih, dan sentuhan sage green. Tampilan tersebut bertujuan memberikan identitas visual yang menarik serta menciptakan pengalaman pengguna yang nyaman.
+
+Selain menyediakan halaman publik untuk pelanggan, L-Patisserie juga dilengkapi dengan halaman administrator untuk mengelola kategori, produk, foto produk, dan testimoni pelanggan melalui sistem CRUD.
+
+1.2 Deskripsi Produk
+
+L-Patisserie merupakan website profil dan katalog produk toko kue yang menyediakan informasi mengenai berbagai jenis kue dan pastry, lengkap dengan foto, harga, deskripsi, serta kategori produk.
+
+Website memiliki dua bagian utama, yaitu:
+
+Halaman Publik: Digunakan pengunjung untuk mengenal usaha, melihat daftar produk, mencari produk, melihat detail produk, dan menghubungi penjual.
+
+Halaman Administrator: Digunakan pemilik usaha untuk mengelola data produk, kategori, testimoni, serta informasi yang ditampilkan pada website.
+
+Seluruh data produk dan kategori disimpan dalam database MySQL dan dikelola menggunakan Laravel Eloquent ORM.
+
+1.3 Tujuan Pengembangan
+
+Tujuan pengembangan L-Patisserie adalah:
+
+Membangun website UMKM yang dinamis menggunakan framework Laravel.
+
+Memperkenalkan usaha L-Patisserie melalui media digital.
+
+Menampilkan informasi produk secara terstruktur dan menarik.
+
+Mempermudah pengunjung dalam mencari dan melihat detail produk.
+
+Memudahkan administrator mengelola produk dan kategori.
+
+Menerapkan konsep database relasional menggunakan MySQL.
+
+Menerapkan CRUD dan validasi data menggunakan Laravel.
+
+Menghasilkan website yang responsif pada berbagai ukuran perangkat.
+
+1.4 Identitas Usaha
+
+Elemen
+
+Keterangan
+
+Nama usaha
+
+L-Patisserie
+
+Pemilik
+
+Lulu Zakiyah
+
+Bidang usaha
+
+Kuliner
+
+Jenis usaha
+
+Toko kue dan pastry
+
+Target pasar
+
+Masyarakat umum, pecinta kue, dan pelanggan acara khusus
+
+Produk utama
+
+Cake, cupcake, cookies, dan pastry
+
+Konsep merek
+
+Modern, elegan, manis, dan estetik
+
+Slogan
+
+Sweet Moments, Made with Love.
+
+1.5 Deskripsi Usaha
+
+L-Patisserie merupakan usaha toko kue yang menawarkan berbagai pilihan cake, cupcake, cookies, dan pastry dengan tampilan menarik serta cita rasa yang lezat.
+
+L-Patisserie mengutamakan kualitas produk, keindahan tampilan, dan pengalaman pelanggan. Setiap produk dirancang untuk memberikan kesan istimewa, baik untuk dinikmati sendiri maupun diberikan sebagai hadiah kepada orang terdekat.
+
+Melalui website L-Patisserie, pelanggan dapat melihat berbagai pilihan produk, mengetahui harga dan deskripsi produk, serta menghubungi pihak toko untuk melakukan pemesanan.
+
+2. IDENTIFIKASI MASALAH
+
+Permasalahan yang menjadi dasar pengembangan website L-Patisserie meliputi:
+
+Informasi produk belum tersedia dalam satu platform yang terorganisasi.
+
+Pelanggan kesulitan mengetahui daftar produk dan harga secara lengkap.
+
+Informasi kategori produk belum tersusun secara sistematis.
+
+Pengelolaan data produk secara manual berpotensi menyebabkan kesalahan informasi.
+
+Foto dan deskripsi produk perlu ditampilkan secara menarik untuk meningkatkan minat pelanggan.
+
+Diperlukan sistem administrasi untuk menambah, mengubah, dan menghapus data produk dengan mudah.
+
+2.1 Solusi yang Ditawarkan
+
+L-Patisserie menyediakan website terintegrasi yang memiliki katalog produk berbasis database, halaman detail produk, fitur pencarian, kategori produk, dan dashboard administrator.
+
+Dengan demikian, informasi dapat diperbarui melalui halaman admin tanpa harus mengubah kode program secara langsung.
+
+3. TARGET PENGGUNA
+
+3.1 Pengunjung (Customer)
+
+Pengunjung merupakan pengguna yang mengakses website untuk memperoleh informasi mengenai usaha dan produk.
+
+Kebutuhan pengunjung:
+
+Melihat informasi usaha.
+
+Melihat katalog produk kue.
+
+Mencari produk berdasarkan nama.
+
+Memfilter produk berdasarkan kategori.
+
+Melihat detail produk.
+
+Melihat foto, harga, dan deskripsi produk.
+
+Melihat testimoni pelanggan.
+
+Menghubungi penjual melalui WhatsApp.
+
+3.2 Administrator (Admin)
+
+Administrator merupakan pengguna yang memiliki akses untuk mengelola konten website.
+
+Kebutuhan administrator:
+
+Login ke halaman admin.
+
+Melihat dashboard.
+
+Melihat jumlah produk dan kategori.
+
+Menambahkan produk baru.
+
+Mengubah informasi produk.
+
+Menghapus produk.
+
+Mengunggah foto produk.
+
+Mengelola kategori.
+
+Mengelola testimoni pelanggan.
+
+Logout dari sistem.
+
+4. RUANG LINGKUP SISTEM
+
+4.1 Fitur yang Termasuk dalam Pengembangan
+
+A. Halaman Publik
+
+Beranda.
+
+Tentang Kami.
+
+Katalog Produk.
+
+Detail Produk.
+
+Pencarian Produk.
+
+Filter Kategori.
+
+Testimoni Pelanggan.
+
+Halaman Kontak.
+
+Tombol pemesanan melalui WhatsApp.
+
+B. Halaman Administrator
+
+Login dan Logout.
+
+Dashboard Admin.
+
+Manajemen Produk.
+
+Manajemen Kategori.
+
+Manajemen Testimoni.
+
+Upload dan pengelolaan gambar.
+
+Validasi input.
+
+4.2 Fitur di Luar Ruang Lingkup
+
+Untuk menjaga pengembangan tetap sesuai dengan kebutuhan UTS, fitur berikut tidak menjadi prioritas:
+
+Pembayaran online.
+
+Integrasi payment gateway.
+
+Pengiriman dan pelacakan pesanan otomatis.
+
+Manajemen stok secara real-time.
+
+Aplikasi mobile native.
+
+Sistem multi-cabang.
+
+Pemesanan dilakukan melalui komunikasi langsung dengan penjual, misalnya melalui WhatsApp.
+
+5. KEBUTUHAN FUNGSIONAL
+
+5.1 Modul Beranda
+
+Beranda merupakan halaman utama yang pertama kali dilihat pengunjung.
+
+Fitur:
+
+Menampilkan logo dan nama L-Patisserie.
+
+Menampilkan navigasi website.
+
+Menampilkan hero section.
+
+Menampilkan deskripsi singkat usaha.
+
+Menampilkan produk unggulan.
+
+Menampilkan kategori produk.
+
+Menampilkan testimoni pelanggan.
+
+Menampilkan tombol menuju katalog produk.
+
+Menampilkan footer berisi informasi usaha.
+
+5.2 Modul Katalog Produk
+
+Katalog produk menampilkan seluruh produk yang tersedia dari database.
+
+Informasi produk:
+
+Nama produk.
+
+Foto produk.
+
+Harga.
+
+Kategori.
+
+Deskripsi singkat.
+
+Status ketersediaan.
+
+Fitur:
+
+Menampilkan produk dari database.
+
+Pencarian berdasarkan nama produk.
+
+Filter berdasarkan kategori.
+
+Tombol melihat detail produk.
+
+Pagination apabila jumlah produk banyak.
+
+Produk yang tidak tersedia tidak ditampilkan sebagai produk yang dapat dipesan.
+
+5.3 Modul Detail Produk
+
+Halaman detail produk menampilkan informasi lengkap dari produk yang dipilih.
+
+Informasi:
+
+Foto produk.
+
+Nama produk.
+
+Harga produk.
+
+Nama kategori.
+
+Deskripsi lengkap.
+
+Status ketersediaan.
+
+Tombol pemesanan melalui WhatsApp.
+
+5.4 Modul Tentang Kami
+
+Halaman ini menjelaskan identitas dan profil usaha L-Patisserie.
+
+Konten:
+
+Sejarah singkat usaha.
+
+Deskripsi usaha.
+
+Visi dan misi.
+
+Nilai dan kualitas produk.
+
+Konsep pelayanan.
+
+5.5 Modul Kontak
+
+Halaman kontak digunakan untuk memberikan informasi komunikasi kepada pelanggan.
+
+Informasi:
+
+Nama usaha.
+
+Nomor WhatsApp.
+
+Alamat usaha apabila tersedia.
+
+Media sosial apabila tersedia.
+
+Jam operasional apabila tersedia.
+
+5.6 Modul Login Admin
+
+Administrator harus melakukan autentikasi sebelum mengakses dashboard.
+
+Ketentuan:
+
+Menggunakan email dan password.
+
+Memeriksa kesesuaian akun dengan database.
+
+Hanya akun yang memiliki status administrator yang boleh masuk ke dashboard.
+
+Pengguna yang tidak memiliki hak akses akan diarahkan kembali.
+
+Menyediakan fitur logout.
+
+5.7 Modul Dashboard Admin
+
+Dashboard menampilkan ringkasan pengelolaan usaha.
+
+Informasi:
+
+Total produk.
+
+Total kategori.
+
+Total testimoni.
+
+Daftar produk terbaru.
+
+Navigasi menuju manajemen data.
+
+5.8 Modul Manajemen Produk
+
+Administrator dapat melakukan CRUD produk.
+
+Create:
+
+Menambahkan nama produk.
+
+Memilih kategori.
+
+Memasukkan harga.
+
+Memasukkan deskripsi.
+
+Mengunggah foto.
+
+Menentukan produk unggulan.
+
+Menentukan status ketersediaan.
+
+Read:
+
+Melihat seluruh daftar produk.
+
+Melihat detail data produk.
+
+Update:
+
+Mengubah nama produk.
+
+Mengubah kategori.
+
+Mengubah harga.
+
+Mengubah deskripsi.
+
+Mengganti foto.
+
+Mengubah status produk.
+
+Delete:
+
+Menghapus produk yang sudah tidak diperlukan.
+
+5.9 Modul Manajemen Kategori
+
+Administrator dapat:
+
+Menambahkan kategori.
+
+Melihat seluruh kategori.
+
+Mengubah nama kategori.
+
+Mengubah deskripsi kategori.
+
+Mengunggah gambar kategori.
+
+Menghapus kategori.
+
+Penghapusan kategori mengikuti aturan relasi database yang telah ditentukan.
+
+5.10 Modul Manajemen Testimoni
+
+Administrator dapat:
+
+Menambahkan testimoni.
+
+Melihat daftar testimoni.
+
+Mengubah informasi testimoni.
+
+Menghapus testimoni.
+
+Mengatur status aktif dan tidak aktif.
+
+Mengatur rating pelanggan.
+
+6. KEBUTUHAN NONFUNGSIONAL
+
+6.1 Responsivitas
+
+Website harus dapat digunakan melalui:
+
+Komputer desktop.
+
+Laptop.
+
+Tablet.
+
+Smartphone.
+
+Tampilan harus menyesuaikan ukuran layar tanpa menyebabkan elemen saling bertumpuk atau terpotong.
+
+6.2 Keamanan
+
+Password admin disimpan dalam bentuk hash.
+
+Halaman admin dilindungi autentikasi.
+
+Validasi dilakukan pada sisi server.
+
+Penggunaan CSRF protection bawaan Laravel.
+
+Pengunggahan file dibatasi berdasarkan tipe dan ukuran.
+
+Pengguna biasa tidak diperbolehkan mengakses fitur administrasi.
+
+6.3 Performa
+
+Query database dilakukan secara efisien.
+
+Foto produk menggunakan ukuran yang sesuai.
+
+Halaman menggunakan pagination untuk daftar produk.
+
+Tampilan tidak membutuhkan pemuatan data yang tidak diperlukan.
+
+6.4 Kemudahan Penggunaan
+
+Antarmuka harus sederhana, mudah dipahami, dan memiliki navigasi yang konsisten.
+
+6.5 Kompatibilitas
+
+Website dapat diakses menggunakan browser modern seperti Google Chrome, Microsoft Edge, dan Mozilla Firefox.
+
+7. DESAIN UI/UX
+
+7.1 Konsep Desain
+
+L-Patisserie menggunakan konsep modern pastel bakery dengan tampilan minimalis, elegan, dan feminin.
+
+Desain mengutamakan:
+
+Ruang putih yang cukup.
+
+Foto produk berukuran jelas.
+
+Tipografi yang mudah dibaca.
+
+Tombol dengan sudut membulat.
+
+Kartu produk yang konsisten.
+
+Navigasi sederhana.
+
+Animasi ringan.
+
+7.2 Palet Warna
+
+Warna
+
+Kode HEX
+
+Penggunaan
+
+Dusty Pink
+
+#D99BAA
+
+Warna utama
+
+Soft Pink
+
+#F7E5E9
+
+Background
+
+Cream
+
+#FFF8F0
+
+Background utama
+
+White
+
+#FFFFFF
+
+Card dan konten
+
+Sage Green
+
+#A8B8A0
+
+Aksen
+
+Cocoa Brown
+
+#6B5148
+
+Teks utama
+
+7.3 Tipografi
+
+Heading: Playfair Display.
+
+Body text: Poppins.
+
+Label dan tombol: Poppins Medium.
+
+7.4 Struktur Halaman
+
+Beranda:
+
+Navbar.
+
+Hero section.
+
+Tentang singkat.
+
+Kategori produk.
+
+Produk unggulan.
+
+Keunggulan usaha.
+
+Testimoni.
+
+Call to action.
+
+Footer.
+
+Katalog:
+
+Navbar.
+
+Judul halaman.
+
+Kolom pencarian.
+
+Filter kategori.
+
+Daftar produk.
+
+Pagination.
+
+Footer.
+
+Dashboard Admin:
+
+Sidebar.
+
+Header dashboard.
+
+Ringkasan statistik.
+
+Tabel produk terbaru.
+
+Navigasi pengelolaan data.
+
+8. PERANCANGAN DATABASE
+
+Database yang digunakan adalah MySQL dengan nama lulu_patisserie.
+
+8.1 Daftar Tabel
+
+A. Tabel Users
+
+Field
+
+Tipe Data
+
+Keterangan
+
+id
+
+BIGINT
+
+Primary Key
+
+name
+
+VARCHAR
+
+Nama pengguna
+
+email
+
+VARCHAR
+
+Email pengguna
+
+password
+
+VARCHAR
+
+Password hash
+
+is_admin
+
+BOOLEAN
+
+Status administrator
+
+created_at
+
+TIMESTAMP
+
+Waktu dibuat
+
+updated_at
+
+TIMESTAMP
+
+Waktu diperbarui
+
+B. Tabel Categories
+
+Field
+
+Tipe Data
+
+Keterangan
+
+id
+
+BIGINT
+
+Primary Key
+
+name
+
+VARCHAR
+
+Nama kategori
+
+slug
+
+VARCHAR
+
+Identitas URL
+
+description
+
+TEXT
+
+Deskripsi kategori
+
+image
+
+VARCHAR
+
+Gambar kategori
+
+created_at
+
+TIMESTAMP
+
+Waktu dibuat
+
+updated_at
+
+TIMESTAMP
+
+Waktu diperbarui
+
+C. Tabel Products
+
+Field
+
+Tipe Data
+
+Keterangan
+
+id
+
+BIGINT
+
+Primary Key
+
+category_id
+
+BIGINT
+
+Foreign Key
+
+name
+
+VARCHAR
+
+Nama produk
+
+slug
+
+VARCHAR
+
+Identitas URL
+
+description
+
+TEXT
+
+Deskripsi produk
+
+price
+
+DECIMAL
+
+Harga produk
+
+image
+
+VARCHAR
+
+Lokasi gambar
+
+is_featured
+
+BOOLEAN
+
+Produk unggulan
+
+is_available
+
+BOOLEAN
+
+Status ketersediaan
+
+created_at
+
+TIMESTAMP
+
+Waktu dibuat
+
+updated_at
+
+TIMESTAMP
+
+Waktu diperbarui
+
+D. Tabel Testimonials
+
+Field
+
+Tipe Data
+
+Keterangan
+
+id
+
+BIGINT
+
+Primary Key
+
+name
+
+VARCHAR
+
+Nama pelanggan
+
+profession
+
+VARCHAR
+
+Keterangan pelanggan
+
+message
+
+TEXT
+
+Isi testimoni
+
+rating
+
+TINYINT
+
+Rating pelanggan
+
+is_active
+
+BOOLEAN
+
+Status publikasi
+
+created_at
+
+TIMESTAMP
+
+Waktu dibuat
+
+updated_at
+
+TIMESTAMP
+
+Waktu diperbarui
+
+8.2 Relasi Database
+
+Relasi utama yang digunakan adalah:
+
+Categories – Products
+
+Satu kategori dapat mempunyai banyak produk, sedangkan satu produk hanya memiliki satu kategori.
+
+Jenis relasi: One to Many (1:N).
+
+Implementasi Eloquent:
+
+Category menggunakan hasMany(Product::class).
+
+Product menggunakan belongsTo(Category::class).
+
+Relasi tersebut memungkinkan data kategori dan produk diambil melalui controller menggunakan Eloquent ORM.
+
+9. VALIDASI DATA
+
+Validasi dilakukan di sisi server menggunakan Laravel Validation.
+
+9.1 Validasi Produk
+
+Field
+
+Aturan Validasi
+
+name
+
+required, string, max:100
+
+category_id
+
+required, exists:categories,id
+
+description
+
+required, string, max:2000
+
+price
+
+required, numeric, min:0
+
+image
+
+nullable, image, mimes:jpg,jpeg,png,webp, max:2048
+
+9.2 Validasi Kategori
+
+Field
+
+Aturan Validasi
+
+name
+
+required, string, max:100
+
+description
+
+nullable, string, max:500
+
+image
+
+nullable, image, mimes:jpg,jpeg,png,webp, max:2048
+
+9.3 Validasi Testimoni
+
+Field
+
+Aturan Validasi
+
+name
+
+required, string, max:100
+
+profession
+
+nullable, string, max:100
+
+message
+
+required, string, max:1000
+
+rating
+
+required, integer, min:1, max:5
+
+Apabila data tidak sesuai aturan, sistem menampilkan pesan kesalahan dan tidak menyimpan data yang tidak valid.
+
+10. MANAJEMEN FILE DAN GAMBAR
+
+Website menyediakan fitur upload gambar produk.
+
+Ketentuan:
+
+Gambar disimpan menggunakan Laravel Storage.
+
+Penyimpanan menggunakan disk public.
+
+File dapat berupa JPG, JPEG, PNG, atau WEBP.
+
+Ukuran maksimal gambar adalah 2 MB.
+
+Lokasi penyimpanan gambar produk berada di storage/app/public/products.
+
+Gambar ditampilkan melalui symbolic link pada public/storage.
+
+Ketika gambar produk diganti, gambar lama dihapus jika tidak lagi digunakan.
+
+11. ALUR KERJA SISTEM
+
+11.1 Alur Pengunjung
+
+Pengunjung membuka website.
+
+Sistem menampilkan halaman beranda.
+
+Pengunjung memilih menu katalog.
+
+Sistem mengambil data produk dari database.
+
+Pengunjung melakukan pencarian atau filter kategori.
+
+Pengunjung memilih salah satu produk.
+
+Sistem menampilkan detail produk.
+
+Pengunjung dapat menghubungi penjual melalui WhatsApp.
+
+11.2 Alur Administrator
+
+Admin membuka halaman login.
+
+Admin memasukkan email dan password.
+
+Sistem melakukan autentikasi.
+
+Jika berhasil, admin diarahkan ke dashboard.
+
+Admin memilih menu pengelolaan data.
+
+Admin melakukan tambah, lihat, ubah, atau hapus data.
+
+Sistem melakukan validasi.
+
+Jika data valid, sistem menyimpan perubahan ke database.
+
+Admin dapat logout.
+
+12. TEKNOLOGI DAN ARSITEKTUR
+
+12.1 Teknologi
+
+Teknologi
+
+Fungsi
+
+PHP
+
+Bahasa pemrograman backend
+
+Laravel 12
+
+Framework aplikasi
+
+MySQL
+
+Database relasional
+
+Blade
+
+Template tampilan
+
+HTML5
+
+Struktur halaman
+
+CSS3
+
+Desain website
+
+JavaScript
+
+Interaksi halaman
+
+Bootstrap atau CSS sendiri
+
+Responsivitas dan komponen UI
+
+Composer
+
+Dependency management
+
+XAMPP
+
+Lingkungan pengembangan lokal
+
+12.2 Arsitektur MVC
+
+Sistem menerapkan pola Model-View-Controller (MVC).
+
+Model
+
+Category.php
+
+Product.php
+
+Testimonial.php
+
+User.php
+
+View
+
+Halaman beranda.
+
+Halaman katalog.
+
+Halaman detail produk.
+
+Halaman tentang.
+
+Halaman kontak.
+
+Dashboard admin.
+
+Controller
+
+HomeController.
+
+ProductController.
+
+AboutController.
+
+ContactController.
+
+AdminController.
+
+ProductManagementController.
+
+CategoryManagementController.
+
+TestimonialManagementController.
+
+Controller bertugas menerima request, berinteraksi dengan model, dan mengirimkan data ke view.
+
+13. DATA AWAL (SEEDER)
+
+Untuk memastikan halaman publik tidak kosong, sistem menyediakan data contoh melalui Laravel Seeder.
+
+Data awal minimal:
+
+Kategori:
+
+Birthday Cake.
+
+Cupcake.
+
+Cookies.
+
+Pastry.
+
+Produk:
+
+Strawberry Dream Cake.
+
+Pink Velvet Cake.
+
+Chocolate Bliss Cake.
+
+Pastel Vanilla Cupcake.
+
+Strawberry Cupcake.
+
+Butter Cookies.
+
+Choco Chip Cookies.
+
+Almond Croissant.
+
+Testimoni:
+
+Alya Putri.
+
+Nadia Rahma.
+
+Salsa Amelia.
+
+Akun administrator:
+
+Nama: Lulu Zakiyah.
+
+Email: admin@lupatisserie.test.
+
+Password awal: password.
+
+Akun demo hanya untuk pengujian lokal dan harus diganti sebelum website dipublikasikan.
+
+14. KEBUTUHAN KEAMANAN DAN AKSES
+
+Fitur
+
+Pengunjung
+
+Admin
+
+Melihat beranda
+
+Ya
+
+Ya
+
+Melihat katalog
+
+Ya
+
+Ya
+
+Melihat detail produk
+
+Ya
+
+Ya
+
+Melihat testimoni
+
+Ya
+
+Ya
+
+Login admin
+
+Tidak
+
+Ya
+
+Menambah produk
+
+Tidak
+
+Ya
+
+Mengubah produk
+
+Tidak
+
+Ya
+
+Menghapus produk
+
+Tidak
+
+Ya
+
+Mengelola kategori
+
+Tidak
+
+Ya
+
+Mengelola testimoni
+
+Tidak
+
+Ya
+
+Semua operasi administrasi harus dilindungi autentikasi dan pemeriksaan hak akses administrator.
+
+15. KRITERIA KEBERHASILAN DAN ACCEPTANCE CRITERIA
+
+Website dinyatakan memenuhi kebutuhan UTS apabila kriteria berikut berhasil dipenuhi.
+
+No.
+
+Kriteria
+
+Indikator Keberhasilan
+
+1
+
+Project Laravel
+
+Project Laravel 12 berjalan menggunakan php artisan serve tanpa error
+
+2
+
+Database
+
+Minimal dua tabel saling berelasi
+
+3
+
+Migration
+
+Struktur tabel berhasil dibuat melalui migration
+
+4
+
+Model dan Eloquent
+
+Model memiliki relasi dan data diambil melalui controller
+
+5
+
+Halaman publik
+
+Produk berasal dari database dan memiliki halaman detail
+
+6
+
+Halaman admin
+
+CRUD produk dapat dilakukan
+
+7
+
+Upload gambar
+
+Gambar tersimpan di storage/public dan tampil pada halaman
+
+8
+
+Validasi
+
+Minimal tiga aturan validasi diterapkan di sisi server
+
+9
+
+Responsivitas
+
+Website dapat digunakan pada desktop, tablet, dan smartphone
+
+10
+
+Seeder
+
+Minimal lima data contoh tersedia
+
+16. RENCANA PENGUJIAN
+
+Pengujian dilakukan untuk memastikan seluruh fitur berjalan sesuai kebutuhan.
+
+16.1 Pengujian Halaman Publik
+
+Memastikan beranda dapat dibuka.
+
+Memastikan daftar produk tampil.
+
+Memastikan pencarian produk berfungsi.
+
+Memastikan filter kategori berfungsi.
+
+Memastikan detail produk tampil.
+
+Memastikan produk yang tidak tersedia tidak dapat dipesan.
+
+Memastikan tombol WhatsApp mengarah ke kontak yang benar.
+
+16.2 Pengujian Administrator
+
+Menguji login dengan akun benar.
+
+Menguji login dengan akun salah.
+
+Menguji pembatasan akses admin.
+
+Menguji tambah produk.
+
+Menguji ubah produk.
+
+Menguji hapus produk.
+
+Menguji tambah kategori.
+
+Menguji perubahan kategori.
+
+Menguji hapus kategori.
+
+Menguji pengelolaan testimoni.
+
+16.3 Pengujian Validasi
+
+Mengosongkan nama produk.
+
+Memasukkan harga dengan format tidak valid.
+
+Memasukkan deskripsi melebihi batas karakter.
+
+Mengunggah file selain gambar.
+
+Mengunggah gambar yang melebihi batas ukuran.
+
+16.4 Pengujian Responsivitas
+
+Pengujian dilakukan pada:
+
+Desktop.
+
+Laptop.
+
+Tablet.
+
+Smartphone.
+
+17. BATASAN DAN ASUMSI
+
+Website dikembangkan untuk kebutuhan usaha toko kue L-Patisserie.
+
+Sistem menggunakan satu administrator utama.
+
+Database menggunakan MySQL.
+
+Data produk dan kategori dikelola melalui dashboard.
+
+Pemesanan dilakukan melalui komunikasi WhatsApp, bukan pembayaran otomatis.
+
+Foto produk disediakan oleh pemilik atau menggunakan foto contoh selama pengembangan.
+
+Sistem dikembangkan menggunakan Laravel 12.
+
+Website dijalankan secara lokal selama tahap pengembangan dan pengujian.
+
+18. HASIL AKHIR YANG DIHARAPKAN
+
+Hasil akhir pengembangan adalah sebuah website UMKM bernama L-Patisserie yang memiliki tampilan modern, elegan, responsif, dan mudah digunakan.
+
+Website diharapkan mampu menjadi media informasi dan promosi usaha melalui katalog digital yang terhubung dengan database MySQL.
+
+Administrator dapat mengelola data produk, kategori, dan testimoni melalui dashboard tanpa mengubah kode program secara langsung.
+
+Selain memenuhi kebutuhan pengembangan website, proyek ini juga menjadi penerapan konsep pemrograman web menggunakan Laravel, khususnya MVC, migration, Eloquent ORM, CRUD, validasi server, upload file, dan responsive web design.
+
+19. PENUTUP
+
+PRD ini menjadi pedoman pengembangan website L-Patisserie agar proses pembangunan berjalan terarah dan sesuai dengan kebutuhan yang telah ditentukan.
+
+Seluruh fitur dan kebutuhan sistem disusun berdasarkan ketentuan Ujian Tengah Semester Pemrograman Web 2 dengan penambahan kebutuhan pendukung agar website dapat digunakan sebagai media digital usaha toko kue.
+
+Dengan adanya L-Patisserie, diharapkan informasi produk dapat disampaikan secara lebih menarik, pengelolaan data menjadi lebih mudah, dan usaha memiliki identitas digital yang profesional.
+
+Disusun oleh:
+
+Lulu Zakiyah
+
+L-Patisserie — Sweet Moments, Made with Love.
